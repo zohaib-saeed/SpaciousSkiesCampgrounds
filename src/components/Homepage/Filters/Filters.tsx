@@ -1,6 +1,7 @@
 import React from 'react';
 import Container from '../../Commons/Container/Container';
 import DatePicker from './DatePicker';
+import Guests from './Guests';
 import Location from './Location';
 
 const Filters: React.FC = () => {
@@ -10,6 +11,7 @@ const Filters: React.FC = () => {
         <div className="grid grid-cols-3 w-full py-[10px] ">
           <Location />
           <DatePicker />
+          <Guests />
         </div>
       </Container>
     </div>

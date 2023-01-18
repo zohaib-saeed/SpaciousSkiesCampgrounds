@@ -19,3 +19,8 @@
 .drawer-bg {
   background: linear-gradient(145deg, rgb(255, 227, 115), rgb(255, 151, 64));
 }
+
+.mantine-DateRangePicker-day[data-selected] {
+  background-color: #173068;
+  color: white;
+}

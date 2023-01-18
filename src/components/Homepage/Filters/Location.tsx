@@ -16,9 +16,9 @@ const Location: React.FC = () => {
         ]}
         classNames={{
           root: 'w-full border-solid border-0 border-r border-iron',
-          label: ' text-black text-sm font-visby',
+          label: ' text-black text-base font-visby',
           input:
-            'border-0 placeholder:text-sapphire text-sm px-0 py-[2px] font-visby placeholder:font-visby',
+            'border-0 placeholder:text-sapphire text-base px-0 py-[2px] font-visby placeholder:font-visby',
           rightSection: 'hidden',
         }}
       />

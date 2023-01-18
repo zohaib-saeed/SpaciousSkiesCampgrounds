@@ -11,7 +11,8 @@ module.exports = {
       darkYellow: "#ffe373",
       saphhire: "#173068",
       iron: "#ced4da",
-      marine: "#173068"
+      marine: "#173068",
+      pineGreen: "#007F80"
     },
     fontFamily: {
       campfire: ['Roboto Slab', 'serif'],

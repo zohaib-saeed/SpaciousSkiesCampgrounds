@@ -24,7 +24,7 @@ const Header: React.FC = () => {
             {/* Logo */}
             <Link href="/">
               <div className="w-[75px] mdl:w-[105px] h-[90px] mdl:h-[120px] cursor-pointer relative flex items-center justify-center object-contain">
-                <Image src="/images/logoWhite.webp" alt="" layout="fill" />
+                <Image priority src="/images/logoWhite.webp" alt="" layout="fill" />
               </div>
             </Link>
 
