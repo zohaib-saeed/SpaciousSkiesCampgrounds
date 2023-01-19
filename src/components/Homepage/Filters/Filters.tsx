@@ -13,7 +13,6 @@ const Filters: React.FC = () => {
   return (
     <>
       {/* For desktop  */}
-
       <div className="w-full hidden mdl:flex items-center justify-center border-solid border-0 border-b border-iron">
         <Container>
           <div className="grid grid-cols-3 w-full py-[10px] ">

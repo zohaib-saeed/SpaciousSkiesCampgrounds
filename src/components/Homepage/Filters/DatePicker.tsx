@@ -15,22 +15,43 @@ const DatePicker: React.FC = () => {
   );
 
   return (
-    <div className="w-full flex justify-start items-center flex-col ">
-      <DateRangePicker
-        amountOfMonths={2}
-        clearable
-        label={<DatePickerLabel />}
-        placeholder="Check in - Check out &nbsp;"
-        onChange={setValue}
-        classNames={{
-          root: 'w-full border-solid border-0 border-r border-iron font-visby px-2',
-          label: 'w-full ',
-          input:
-            'border-0 placeholder:text-sapphire text-base px-0 py-[2px] font-visby placeholder:font-visby',
-          calendarHeaderLevel: 'uppercase text-pineGreen font-visby font-bold',
-        }}
-      />
-    </div>
+    <>
+      {/* Desktop Screen  */}
+      <div className="w-full hidden lg:flex justify-start items-center flex-col border-solid border-0 border-r border-iron px-2">
+        <DateRangePicker
+          amountOfMonths={2}
+          clearable
+          label={<DatePickerLabel />}
+          placeholder="Check in - Check out &nbsp;"
+          onChange={setValue}
+          classNames={{
+            root: 'w-full  font-visby px-2',
+            label: 'w-full ',
+            input:
+              'border-0 placeholder:text-sapphire text-base px-0 py-[2px] font-visby placeholder:font-visby',
+            calendarHeaderLevel: 'uppercase text-pineGreen font-visby font-bold',
+          }}
+        />
+      </div>
+
+      {/* Mobile Screen  */}
+      <div className="w-full lg:hidden flex justify-start items-center flex-col ">
+        <DateRangePicker
+          amountOfMonths={1}
+          clearable
+          label={<DatePickerLabel />}
+          placeholder="Check in - Check out &nbsp;"
+          onChange={setValue}
+          classNames={{
+            root: 'w-full  font-visby',
+            label: 'w-full ',
+            input:
+              'border-[1px] border-iron placeholder:text-sapphire text-base text-[17px] px-3 h-[47px] mt-[2px]  font-visby placeholder:font-visby rounded-md focus:border-sapphire',
+            calendarHeaderLevel: 'uppercase text-pineGreen font-visby font-bold',
+          }}
+        />
+      </div>
+    </>
   );
 };
 
