@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import Container from '../../Commons/Container/Container';
-import FilterSmall from '../../Popups/Homepage/FilterSmall';
-import DatePicker from './DatePicker';
-import Guests from './Guests';
-import Location from './Location';
+import Container from '../Commons/Container/Container';
+import FilterSmall from '../Popups/Homepage/FilterSmall';
+import DatePicker from './Filters/DatePicker';
+import Guests from './Filters/Guests';
+import Location from './Filters/Location';
 
 const Filters: React.FC = () => {
   const [openFilterModal, setOpenFilterModal] = useState(false);

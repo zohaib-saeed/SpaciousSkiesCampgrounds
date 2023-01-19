@@ -30,7 +30,7 @@ const Header: React.FC = () => {
 
             <div className=" flex justify-end items-center gap-5">
               {/* Social Links + Explore +Stay */}
-              <div className=" hidden md:flex justify-end items-center gap-5 ">
+              <div className=" hidden lg:flex justify-end items-center gap-5 ">
                 {/* FacebookIcon */}
                 <Link href="https://facebook.com">
                   <a

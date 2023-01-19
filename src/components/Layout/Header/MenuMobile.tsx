@@ -28,7 +28,7 @@ const MenuMobile: React.FC<Props> = ({ menuOpened, setMenuOpened }: Props) => {
       size="full"
       position="top"
       classNames={{
-        root: 'flex justify-center items-start md:hidden ',
+        root: 'flex justify-center items-start lg:hidden ',
         body: 'h-full',
       }}
     >

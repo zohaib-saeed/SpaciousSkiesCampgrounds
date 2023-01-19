@@ -18,12 +18,12 @@ const Guests: React.FC = () => {
             label: 'text-black text-base font-visby font-semibold',
             root: 'w-full',
             input:
-              'border-0 text-base text-base h-[47px]  font-visby font-semibold placeholder:font-visby rounded-md focus:border-0 px-0',
+              'border-0 text-base text-base h-[47px]  font-visby font-normal placeholder:font-visby rounded-md focus:border-0 px-0 cursor-pointer',
           }}
         />
 
         {/* =>Search Icon  */}
-        <div className="bg-saphhire px-5 py-5 rounded-lg flex items-center justify-center">
+        <div className="bg-saphhire px-5 py-5 rounded-lg flex items-center justify-center cursor-pointer">
           <SearchIcon color="white" size={20} />
         </div>
       </div>
@@ -39,7 +39,7 @@ const Guests: React.FC = () => {
             label: 'text-black text-base font-visby font-semibold',
             root: 'w-full',
             input:
-              'border-[1px] border-iron placeholder:text-sapphire text-base text-[17px] px-3 h-[47px] mt-[2px]  font-visby placeholder:font-visby rounded-md focus:border-sapphire',
+              'border-[1px] border-iron placeholder:text-sapphire text-base text-[17px] px-3 h-[47px] mt-[2px]  font-visby placeholder:font-visby rounded-md focus:border-saphhire cursor-pointer',
           }}
         />
       </div>

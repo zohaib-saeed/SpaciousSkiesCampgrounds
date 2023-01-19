@@ -41,7 +41,7 @@ const Location: React.FC = () => {
             root: 'w-full ',
             label: ' text-black text-[17px] font-visby',
             input:
-              'border-[1px] border-iron placeholder:text-sapphire text-[17px] px-3 h-[47px] mt-[2px] font-visby placeholder:font-visby rounded-md focus:border-sapphire',
+              'border-[1px] border-iron  text-[17px] px-3 h-[47px] mt-[2px] font-visby placeholder:font-visby rounded-md focus:border-saphhire',
             rightSection: 'hidden',
           }}
         />

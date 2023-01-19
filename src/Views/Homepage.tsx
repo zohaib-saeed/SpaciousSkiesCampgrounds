@@ -1,5 +1,5 @@
 import React from 'react';
-import Filters from '../components/Homepage/Filters/Filters';
+import Filters from '../components/Homepage/Filters';
 import Hero from '../components/Homepage/Hero';
 
 const Homepage: React.FC = () => {

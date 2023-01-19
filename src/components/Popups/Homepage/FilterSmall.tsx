@@ -19,19 +19,27 @@ const FilterSmall: React.FC<Props> = ({ opened, setOpened }) => {
       fullScreen
       withCloseButton={false}
       zIndex={9999}
+      classNames={{
+        root: 'lg:hidden flex',
+      }}
     >
       <div className="w-full flex items-center justify-start flex-col">
         {/* => Close Button  */}
         <div className="w-full flex items-center justify-end">
-          <CloseIcon color="#173068" size={30} />
+          <CloseIcon
+            color="#173068"
+            size={30}
+            onClick={() => setOpened(false)}
+            className="cursor-pointer"
+          />
         </div>
-        <div className="w-full max-w-[400px] flex flex-col items-center justify-start gap-3">
+        <div className="w-full max-w-[470px] flex flex-col items-center justify-start gap-3">
           <Location />
           <DatePicker />
           <Guests />
           <Button
             classNames={{
-              root: 'w-full px-3 font-bold  rounded-md text-base h-[42px] bg-saphhire',
+              root: 'w-full px-3 font-bold  rounded-md text-base h-[42px] bg-saphhire hover:bg-saphhire',
               inner: '',
             }}
           >

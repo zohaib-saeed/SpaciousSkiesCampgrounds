@@ -21,7 +21,7 @@ const MenuDesktop: React.FC<Props> = ({ menuOpened, setMenuOpened }: Props) => {
   return (
     <Drawer
       classNames={{
-        root: 'hidden md:flex ',
+        root: 'hidden lg:flex ',
       }}
       opened={menuOpened}
       onClose={() => setMenuOpened(false)}
