@@ -12,7 +12,7 @@ const Location: React.FC = () => {
       {/* => Top title  */}
       <div className="w-full flex items-center justify-between px-4 ">
         <div className="text-xs uppercase font-visby font-semibold text-ashGray ">Locations</div>
-        <div className="w-[80%] lg:w-[75%] bg-iron h-[1.5px] rounded-full"></div>
+        <div className="w-[75%] bg-iron h-[1.5px] rounded-full"></div>
       </div>
       {/* => Locaitons based on search query */}
       <div className="w-full flex flex-col items-start justify-start gap-1">

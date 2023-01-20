@@ -23,10 +23,10 @@ const Guests: React.FC = () => {
               type="button"
               label="Guests"
               classNames={{
-                label: 'text-black text-base font-visby font-semibold',
-                root: 'w-full',
+                label: 'text-black text-base font-visby font-semibold !leading-[0px]',
+                root: 'w-full ',
                 input:
-                  'border-0 text-base text-base h-[47px]  font-visby font-normal placeholder:font-visby rounded-md focus:border-0 px-0 cursor-pointer',
+                  'border-0 text-base text-base h-[47px]   font-visby font-normal placeholder:font-visby rounded-md focus:border-0 px-0 cursor-pointer',
               }}
             />
           </Popover.Target>
