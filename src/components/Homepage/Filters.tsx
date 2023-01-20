@@ -28,7 +28,7 @@ const Filters: React.FC = () => {
         <Container>
           <div
             onClick={filterToggleHandler}
-            className="py-3 w-full flex mdl:hidden items-center justify-between border-solid border-0 border-b border-iron"
+            className="py-3 w-full cursor-pointer flex mdl:hidden items-center justify-between border-solid border-0 border-b border-iron"
           >
             {/* => Date + Persons  */}
             <div className="flex flex-col items-start justify-center gap-2">
