@@ -9,7 +9,8 @@ interface Props {
   setMenuOpened: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const MenuMobile: React.FC<Props> = ({ menuOpened, setMenuOpened }: Props) => {
+const MenuDropdownSm: React.FC<Props> = ({ menuOpened, setMenuOpened }: Props) => {
+  // Nav Menu Items
   const menuOptions: string[] = [
     'campgrounds',
     'shop',
@@ -97,4 +98,4 @@ const MenuMobile: React.FC<Props> = ({ menuOpened, setMenuOpened }: Props) => {
   );
 };
 
-export default MenuMobile;
+export default MenuDropdownSm;

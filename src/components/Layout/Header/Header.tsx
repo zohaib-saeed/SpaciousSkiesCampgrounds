@@ -8,26 +8,31 @@ import Menu from './Menu';
 import Container from '../../Commons/Container/Container';
 
 const Header: React.FC = () => {
+  // Handling the Menu Opening
   const [menuOpened, setMenuOpened] = useState<boolean>(false);
+
+  //Handilg the title for Menu Hamburget Tooltip
   const menuTitle: string = menuOpened ? 'Close navigation' : 'Open navigation';
 
+  //Menu button click handler
   const menuHandler: () => void = () => {
     setMenuOpened((o) => !o);
   };
 
   return (
     <>
+      {/* Main Header => This will display on each of the page, except the ones that are being handled conditionally when required */}
       <header className="z-[999] w-full flex justify-center items-center absolute top-0 left-0 py-6">
         <Container>
           {/* => Navbar */}
           <nav className=" w-full  flex justify-between items-center relative">
-            {/* Logo */}
+            {/* Left =>  Logo */}
             <Link href="/">
               <div className="w-[75px] mdl:w-[105px] h-[90px] mdl:h-[120px] cursor-pointer relative flex items-center justify-center object-contain">
                 <Image priority src="/images/logoWhite.webp" alt="" layout="fill" />
               </div>
             </Link>
-
+            {/* Right => Desktop: menu Button + Menu Items / Mobile : Menu Button  + My Cart  */}
             <div className=" flex justify-end items-center gap-5">
               {/* Social Links + Explore +Stay */}
               <div className=" hidden lg:flex justify-end items-center gap-5 ">
@@ -95,6 +100,8 @@ const Header: React.FC = () => {
           </nav>
         </Container>
       </header>
+
+      {/* Menu Dropdown  => Main menu component for all screens that will open up by clicking on menu icon button */}
       <Menu menuOpened={menuOpened} setMenuOpened={setMenuOpened} />
     </>
   );

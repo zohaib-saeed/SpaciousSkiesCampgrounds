@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import { DateRangePicker, DateRangePickerValue } from '@mantine/dates';
 
 const DatePicker: React.FC = () => {
-  const [value, setValue] = useState<DateRangePickerValue>([
+  // Date handling for date picker
+  const [dates, setDates] = useState<DateRangePickerValue>([
     new Date(2021, 11, 1),
     new Date(2021, 11, 5),
   ]);
 
+  //Custom Label for Date Picker
   const DatePickerLabel = () => (
     <div className="w-full flex justify-between items-center gap-3">
       <p className="text-black text-base font-visby">Reservation Dates</p>
@@ -23,7 +25,7 @@ const DatePicker: React.FC = () => {
           clearable
           label={<DatePickerLabel />}
           placeholder="Check in - Check out &nbsp;"
-          onChange={setValue}
+          onChange={setDates}
           classNames={{
             root: 'w-full  font-visby px-2',
             label: 'w-full ',
@@ -41,7 +43,7 @@ const DatePicker: React.FC = () => {
           clearable
           label={<DatePickerLabel />}
           placeholder="Check in - Check out &nbsp;"
-          onChange={setValue}
+          onChange={setDates}
           classNames={{
             root: 'w-full  font-visby',
             label: 'w-full ',

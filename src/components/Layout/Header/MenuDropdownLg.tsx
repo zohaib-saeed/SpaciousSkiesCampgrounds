@@ -7,7 +7,8 @@ interface Props {
   setMenuOpened: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const MenuDesktop: React.FC<Props> = ({ menuOpened, setMenuOpened }: Props) => {
+const MenuDropdownLg: React.FC<Props> = ({ menuOpened, setMenuOpened }: Props) => {
+  // Nav Menu Items
   const menuOptions: string[] = [
     'campgrounds',
     'shop',
@@ -52,4 +53,4 @@ const MenuDesktop: React.FC<Props> = ({ menuOpened, setMenuOpened }: Props) => {
   );
 };
 
-export default MenuDesktop;
+export default MenuDropdownLg;

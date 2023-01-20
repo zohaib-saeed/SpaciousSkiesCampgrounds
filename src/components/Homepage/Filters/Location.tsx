@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
 import { Select, Box } from '@mantine/core';
+import { locations } from '../../../data/static/filter';
 
 const Location: React.FC = () => {
-  const [value, setValue] = useState<string | null>(null);
+  // States for location
+  const [location, setLocation] = useState<string | null>(null);
 
-  const locations: string[] = [
-    'denamrk, south carolina',
-    'denmark, wisconsin',
-    'denamrk, tennesse',
-  ];
-
+  //Custom Dropdown component for location search box
   const LocationDropdown: () => JSX.Element = () => (
     <div className="w-full flex justify-start items-center flex-col gap-[10px] rounded py-3 px-1  shadow-sm">
       {/* => Top title  */}
@@ -22,7 +19,7 @@ const Location: React.FC = () => {
         {locations.map((location, index) => (
           <div
             key={index}
-            onClick={() => setValue(location)}
+            onClick={() => setLocation(location)}
             className="w-full text-base text-coolBlack text-left py-3 px-4 rounded capitalize cursor-pointer hover:bg-iron hover:bg-opacity-20 transition-all duration-100"
           >
             {location}
@@ -40,7 +37,7 @@ const Location: React.FC = () => {
           searchable
           label="Campground or City/State"
           placeholder="Where do you want to go?"
-          value={value}
+          value={location}
           dropdownComponent={() => <LocationDropdown />}
           data={locations}
           classNames={{
@@ -52,13 +49,14 @@ const Location: React.FC = () => {
           }}
         />
       </div>
+
       {/* Small Screens  */}
       <div className="w-full flex mdl:hidden justify-start items-center">
         <Select
           searchable
           label="Campground or City/State"
           placeholder="Where do you want to go?"
-          value={value}
+          value={location}
           dropdownComponent={() => <LocationDropdown />}
           data={locations}
           classNames={{

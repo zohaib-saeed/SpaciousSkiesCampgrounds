@@ -1,8 +1,8 @@
 import React from 'react';
 import { Transition } from '@mantine/core';
 
-import MenuDesktop from './MenuDesktop';
-import MenuMobile from './MenuMobile';
+import MenuDropdownLg from './MenuDropdownLg';
+import MenuDropdownSm from './MenuDropdownSm';
 
 interface Props {
   menuOpened: boolean;
@@ -11,11 +11,12 @@ interface Props {
 
 const Menu: React.FC<Props> = ({ menuOpened, setMenuOpened }: Props) => {
   return (
+    // Main Menu Dropwdown => Has Individual Components for both desktop and small screens
     <Transition mounted={menuOpened} transition="slide-down" duration={1000} timingFunction="ease">
       {(styles) => (
         <div style={styles}>
-          <MenuDesktop menuOpened={menuOpened} setMenuOpened={setMenuOpened} />
-          <MenuMobile menuOpened={menuOpened} setMenuOpened={setMenuOpened} />
+          <MenuDropdownLg menuOpened={menuOpened} setMenuOpened={setMenuOpened} />
+          <MenuDropdownSm menuOpened={menuOpened} setMenuOpened={setMenuOpened} />
         </div>
       )}
     </Transition>

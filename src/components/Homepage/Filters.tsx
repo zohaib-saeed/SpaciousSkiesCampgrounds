@@ -6,10 +6,14 @@ import Guests from './Filters/Guests';
 import Location from './Filters/Location';
 
 const Filters: React.FC = () => {
-  const [openFilterModal, setOpenFilterModal] = useState(false);
+  // Hnadling the opening and closing  of filter  modal component for small screen
+  const [openFilterModal, setOpenFilterModal] = useState<boolean>(false);
+
+  //Filter Modal Component  toggle handler
   const filterToggleHandler: () => void = () => {
     setOpenFilterModal(true);
   };
+
   return (
     <>
       {/* For desktop  */}

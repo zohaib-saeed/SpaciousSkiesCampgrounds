@@ -11,6 +11,8 @@ interface Props {
   setOpened: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
+// Filter for mobile view => This will appear as a Modal whenn user clicks the filter customization option on homepage for small screens
+
 const FilterSmall: React.FC<Props> = ({ opened, setOpened }) => {
   return (
     <Modal
@@ -33,10 +35,14 @@ const FilterSmall: React.FC<Props> = ({ opened, setOpened }) => {
             className="cursor-pointer"
           />
         </div>
+
+        {/* => Searh Inputs + Updated filter search button  */}
         <div className="w-full max-w-[470px] flex flex-col items-center justify-start gap-3">
+          {/* Search inputs  */}
           <Location />
           <DatePicker />
           <Guests />
+          {/* Button => Will update the search based on user inserted search values */}
           <Button
             classNames={{
               root: 'w-full px-3 font-bold  rounded-md text-base h-[42px] bg-saphhire hover:bg-saphhire',
