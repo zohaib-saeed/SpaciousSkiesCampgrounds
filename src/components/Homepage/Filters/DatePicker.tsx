@@ -46,7 +46,7 @@ const DatePicker: React.FC = () => {
             root: 'w-full  font-visby',
             label: 'w-full ',
             input:
-              'border-[1px] border-iron  text-base text-[17px] px-3 h-[47px] mt-[2px]  font-visby placeholder:font-visby rounded-md focus:border-saphhire',
+              'border-[1px] border-iron  text-base text-[17px] px-3 h-[43px] mt-[2px]  font-visby placeholder:font-visby rounded-md focus:border-saphhire',
             calendarHeaderLevel: 'uppercase text-pineGreen font-visby font-bold',
           }}
         />

@@ -15,7 +15,7 @@ const Location: React.FC = () => {
       {/* => Top title  */}
       <div className="w-full flex items-center justify-between px-4 ">
         <div className="text-xs uppercase font-visby font-semibold text-ashGray ">Locations</div>
-        <div className="w-[80%] bg-iron h-[1.5px] rounded-full"></div>
+        <div className="w-[80%] lg:w-[75%] bg-iron h-[1.5px] rounded-full"></div>
       </div>
       {/* => Locaitons based on search query */}
       <div className="w-full flex flex-col items-start justify-start gap-1">
@@ -47,7 +47,7 @@ const Location: React.FC = () => {
             root: 'w-full ',
             label: ' text-black text-base font-visby',
             input:
-              'border-0 placeholder:text-sapphire text-base px-0 py-[2px] font-visby placeholder:font-visby',
+              'border-0 placeholder:text-sapphire text-base px-0 py-[2px] font-visby placeholder:font-visby capitalize',
             rightSection: 'hidden',
           }}
         />
@@ -65,7 +65,7 @@ const Location: React.FC = () => {
             root: 'w-full ',
             label: ' text-black text-[17px] font-visby',
             input:
-              'border-[1px] border-iron  capitalize text-[17px] px-3 h-[47px] mt-[2px] font-visby placeholder:font-visby rounded-md focus:border-saphhire',
+              'border-[1px] border-iron  capitalize text-[17px] px-3 h-[43px] mt-[2px] font-visby placeholder:font-visby rounded-md focus:border-saphhire',
             rightSection: 'hidden',
           }}
         />

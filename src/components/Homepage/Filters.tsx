@@ -13,7 +13,7 @@ const Filters: React.FC = () => {
   return (
     <>
       {/* For desktop  */}
-      <div className="w-full hidden mdl:flex items-center justify-center border-solid border-0 border-b border-iron">
+      <div className="w-full hidden lg:flex items-center justify-center border-solid border-0 border-b border-iron">
         <Container>
           <div className="grid grid-cols-3 w-full py-[10px] ">
             <Location />
@@ -28,7 +28,7 @@ const Filters: React.FC = () => {
         <Container>
           <div
             onClick={filterToggleHandler}
-            className="py-3 w-full cursor-pointer flex mdl:hidden items-center justify-between border-solid border-0 border-b border-iron"
+            className="py-3 w-full cursor-pointer flex lg:hidden items-center justify-between border-solid border-0 border-b border-iron"
           >
             {/* => Date + Persons  */}
             <div className="flex flex-col items-start justify-center gap-2">
@@ -42,7 +42,7 @@ const Filters: React.FC = () => {
         </Container>
       </div>
 
-      {/* Mobile Filter Modal  */}
+      {/*  Filter Modal => Small Screens  */}
       <FilterSmall opened={openFilterModal} setOpened={setOpenFilterModal} />
     </>
   );
