@@ -1,7 +1,7 @@
 import React from 'react';
 import { GoSearch as SearchIcon } from 'react-icons/go';
 import { Popover, TextInput } from '@mantine/core';
-import GuestsFilterDropdown from '../../Popovers/Homepage/GuestsFilter';
+import GuestsFilterDropdown from './GuestsFilterDropdown';
 
 const Guests: React.FC = () => {
   return (

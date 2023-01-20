@@ -3,14 +3,15 @@ import NextApp, { AppProps, AppContext } from 'next/app';
 import { getCookie, setCookie } from 'cookies-next';
 import Head from 'next/head';
 import { MantineProvider, ColorSchemeProvider } from '@mantine/core';
-import { ColorScheme } from '@mantine/styles';
+import { ColorScheme, MantineThemeColorsOverride } from '@mantine/styles';
 import { NotificationsProvider } from '@mantine/notifications';
 import '../styles/global.css';
 import Layout from '../components/Layout/Layout';
+import { theme } from '../../mantine-config/theme';
 
 export default function App(props: AppProps & { colorScheme: ColorScheme }) {
   const { Component, pageProps } = props;
-  const [colorScheme, setColorScheme] = useState<ColorScheme>(props.colorScheme);
+  const [colorScheme, setColorScheme] = useState<ColorScheme>('light');
 
   const toggleColorScheme = (value?: ColorScheme) => {
     const nextColorScheme = value || (colorScheme === 'dark' ? 'light' : 'dark');
@@ -27,7 +28,11 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
       </Head>
 
       <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
-        <MantineProvider withGlobalStyles withNormalizeCSS>
+        <MantineProvider
+          theme={{ ...theme, colorScheme } as MantineThemeColorsOverride}
+          withGlobalStyles
+          withNormalizeCSS
+        >
           <NotificationsProvider>
             <Layout>
               <Component {...pageProps} />
