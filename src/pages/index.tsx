@@ -1,9 +1,12 @@
+import React from 'react';
 import Homepage from '../views/Homepage';
 
-export default function HomePage() {
+const Home = () => {
   return (
     <>
       <Homepage />
     </>
   );
-}
+};
+
+export default Home;
